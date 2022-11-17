@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee+Spice&family=Inter&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.glassmorph{
+    background: rgba(255, 255, 255, 0.145);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.dark-glassmorph{
+    background: rgba(0, 0, 0, 0.145);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 2px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.dashboard-box{
+    background: rgba(20, 20, 20, 0.845);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 8px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+body .purchases::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(88, 88, 88, 0.3);
+	background-color: #F5F5F5;
+}
+
+body .purchases::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+body .purchases::-webkit-scrollbar-thumb
+{
+	background-color: #535353;
+}
