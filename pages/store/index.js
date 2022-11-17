@@ -105,7 +105,7 @@ export default function index(){
                         </div>
                     )
                 })}
-            </div>) : (<h1 className='text-6xl font-Bungee text-center'>Login first to redeem things.</h1>)}
+            </div>) : (<h1 className='text-6xl font-Bungee text-center'>Login first to buy things.</h1>)}
             <Footer />
         </div>
     )

@@ -1,14 +1,19 @@
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect as UseEffect, useState as UseState } from 'react'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 
 function gamebar() {
+    const [token, setToken] = UseState("")
+
+    UseEffect(() => {
+        setToken(localStorage.getItem('Token'))
+    }, [])
     return (
         <div>
             <Navbar title="Gamebar" />
             <img src="./wave-bg.png" alt="wave" className="fixed top-0 -z-10 h-screen"/>
-            <div className='my-10 p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10'>
+            {token ? (            <div className='my-10 p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10'>
                 <div className='dark-glassmorph p-3'>
                     <h1 className='text-3xl text-white font-Bebas text-center'>Maths for nerds</h1>
                     <p className='text-md text-white font-Bebas text-center my-3'>Do you like basic maths that you studied in your primary school? Well you can also earn points by doing these questions!</p>
@@ -60,7 +65,7 @@ function gamebar() {
                 <div className='dark-glassmorph p-3'>
                     <h1 className='text-3xl text-white font-Bebas text-center'>More Coming Soon</h1>
                 </div>
-            </div>
+            </div>) : (<div className="font-Bungee text-center text-6xl">You need to login first.</div> )}
             <Footer />
         </div>
     )
