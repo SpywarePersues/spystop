@@ -6,6 +6,8 @@ import { db } from '../firebaseConfig'
 import { collection, doc, getDocs, orderBy, query, updateDoc } from 'firebase/firestore'
 import Footer from "../components/Footer";
 import CoinsGraph from "../components/charts/CoinsGraph";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import { Line } from "react-chartjs-2";
 import {
@@ -89,6 +91,9 @@ export default function Dashboard(){
         setToken(localStorage.getItem('Token'))
     }, [])
 
+    const notify = () => toast.error("You do not have enough money to invest in.");
+    const notify2 = () => toast.success("Successfully Invested!");
+
     const databaseRef2 = collection(db, 'accounts')
     return(
         <div className="">
@@ -98,6 +103,7 @@ export default function Dashboard(){
                 mounted ? 
                 token ? 
                 <div>
+                    <ToastContainer />
                     <div className="dark-glassmorph w-8/12 mx-auto p-3">
                         <h1 className="font-Bebas text-4xl text-white text-center my-4">STOCKS GRAPH</h1>
                         <Line data={data} />
@@ -121,11 +127,11 @@ export default function Dashboard(){
                                         GeneralLevel: userGeneralLevel,
                                         QuizLevel: userQuizLevel,
                                     });
-                                    alert('Successfully Invested')
+                                    notify2()
                                     getData()
                                 }
                                 else {
-                                    alert('You do not have enough points to invest in this.')
+                                    notify()
                                 }
                             }}>INVEST</button>
                             <h1 className="font-Bebas text-4xl text-white text-center my-6">MY STOCKS</h1>

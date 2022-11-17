@@ -54,6 +54,7 @@ function gamebar() {
                 <div className='dark-glassmorph p-3'>
                     <h1 className='text-3xl text-white font-Bebas text-center'>Tech Quiz</h1>
                     <p className='text-md text-white font-Bebas text-center my-3'>Do you like Tech quizzes? do you not? well...it is not that hard, just try you will get the answers! of course using Google...Who created google? </p>
+                    <Link href="/quiz">
                     <div className="text-center">
                         <button class="relative font-Bebas text-2xl inline-flex items-center justify-center p-0.5 mr-2 overflow-hidden font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-blue-500 group-hover:from-pink-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none">
                         <span class="relative px-5 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
@@ -61,6 +62,7 @@ function gamebar() {
                         </span>
                         </button>
                     </div>
+                    </Link>
                 </div>
                 <div className='dark-glassmorph p-3'>
                     <h1 className='text-3xl text-white font-Bebas text-center'>More Coming Soon</h1>

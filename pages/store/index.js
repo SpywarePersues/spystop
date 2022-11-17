@@ -6,6 +6,8 @@ import Navbar from "../../components/Navbar";
 import { useRouter as UseRouter } from 'next/router';
 import Link from 'next/link';
 import Footer from '../../components/Footer';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function index(){
     const router = UseRouter()
@@ -64,12 +66,15 @@ export default function index(){
         setEmail(localStorage.getItem('Email'))
     }, [])
 
-    
+    const notify = () => toast.error("You do not have enough money to purchase this.");
+    const notify2 = () => toast.success("Successfully Purchased!!");
+
 
     return(
         <div className=''>
             <Navbar title="Store" />
             <img src="./wave-bg.png" alt="wave" className="fixed top-0 -z-10 h-screen"/>
+            <ToastContainer />
             <h1 className='text-6xl font-Bungee text-center pb-5 pt-5 font-semibold'>Deal of the Month</h1>
             {token ? (<div className='my-10 p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4'>
                 {firedata.map((data) => {
@@ -95,11 +100,11 @@ export default function index(){
                                         GeneralLevel: userGeneralLevel,
                                         QuizLevel: userQuizLevel,
                                     });
-                                    alert('Successfully purchased '+ data.name)
+                                    notify2()
                                     getAccountsData()
                                 }
                                 else {
-                                    alert('You do not have enough points to redeem this.')
+                                    notify()
                                 }
                             }}>REDEEM</button>
                         </div>

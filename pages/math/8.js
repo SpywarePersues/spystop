@@ -4,6 +4,8 @@ import Navbar from '../../components/Navbar'
 import { useRouter as UseRouter } from 'next/router'
 import { db } from '../../firebaseConfig'
 import { collection, doc, getDocs, updateDoc } from 'firebase/firestore'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function eight() {
     
@@ -53,10 +55,14 @@ function eight() {
     UseEffect(() => {
         
     }, [])
+
+    const notify = () => toast.error("Incorrect Answer");
+    const notify2 = () => toast.success("Correct Answer");
     return (
         <div>
             <Navbar title="Lvl - 8 Maths for Nerds" />
             <img src="../../wave-bg.png" alt="wave" className="fixed top-0 -z-10 h-screen"/>
+            <ToastContainer />
             <h1 className='font-Bungee text-5xl text-white text-center mb-6'>Level 8</h1>
             <h1 className='font-Bebas text-5xl text-white text-center my-10'>Square of 962</h1>
             <input className="glassmorph p-3 w-6/12 mx-auto block text-white outline-none" type="number" onChange={event => setAnswer(Number(event.target.value))}/>
@@ -77,10 +83,11 @@ function eight() {
                                         QuizLevel: userQuizLevel,
                                     });
                                     getData()
+                                    notify2()
                                     router.push('/math')
                                 }
                                 else {
-                                    alert('Wrong Answer.')
+                                    notify()
                                 }
                             }}>SUBMIT</button>
             <Footer />

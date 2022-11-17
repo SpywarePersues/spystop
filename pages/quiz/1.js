@@ -7,7 +7,7 @@ import { collection, doc, getDocs, updateDoc } from 'firebase/firestore'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-function four() {
+function one() {
     
     const databaseRef = collection(db, 'accounts')
     const [firedata, setFiredata] = UseState()
@@ -38,13 +38,12 @@ function four() {
                     setUserCrypticLevel(data.data().CrypticLevel)
                     setUserGeneralLevel(data.data().GeneralLevel)
                     setUserQuizLevel(data.data().QuizLevel)
-                    if(data.data().MathsLevel === 4){
+                    if(data.data().QuizLevel === 1){
                     }
                     else {
-                        router.push('/math')
+                        router.push('/quiz')
                     }
                 }
-                
             }))
         })
     }
@@ -60,31 +59,40 @@ function four() {
     const notify2 = () => toast.success("Correct Answer");
     return (
         <div>
-            <Navbar title="Lvl - 4 Maths for Nerds" />
+            <Navbar title="Lvl - 1 Tech Quiz" />
             <img src="../../wave-bg.png" alt="wave" className="fixed top-0 -z-10 h-screen"/>
             <ToastContainer />
-            <h1 className='font-Bungee text-5xl text-white text-center mb-6'>Level 4</h1>
-            <h1 className='font-Bebas text-5xl text-white text-center my-10'>15% of 11</h1>
+            <h1 className='font-Bungee text-5xl text-white text-center mb-6'>Level 1</h1>
+            <h1 className='font-Bebas text-5xl text-white text-center my-10'>Who created Javascript</h1>
+            <div className='md:flex w-10/12 md:w-3/12 mx-auto'>
+                <h1 className='text-white text-xl my-4 mx-10 font-Bebas'>1) Brendan Eech</h1>
+                <h1 className='text-white text-xl my-4 mx-10 font-Bebas'>2) Brendan Eich</h1>
+            </div>
+            <div className='md:flex w-10/12 md:w-3/12 mx-auto mb-10'>
+                <h1 className='text-white text-xl my-4 mx-10 font-Bebas'>3) Brenden Eich</h1>
+                <h1 className='text-white text-xl my-4 mx-10 font-Bebas'>4) Berendan Eich</h1>
+            </div>
+            <h1 className='text-white my-4 mx-10 text-center font-Bebas text-2xl'>Enter the option number only, For example 1, 2, 3, 4.</h1>
             <input className="glassmorph p-3 w-6/12 mx-auto block text-white outline-none" type="number" onChange={event => setAnswer(Number(event.target.value))}/>
             <button className="font-Bebas text-center button mt-2 bg-gradient-to-r from-blue-500 to-pink-600 px-5 text-gray-200 w-fit py-2 rounded-md text-xl mx-auto block" onClick={async () => {
-                                if(answer === 1.65){
+                                if(answer === 2){
                                     const docRef = await updateDoc(doc(db, 'accounts', `${localStorage.getItem('Email')}`), {
                                         Username: localStorage.getItem('Name'),
-                                        Balance: balance + 200,
+                                        Balance: balance + 100,
                                         email: localStorage.getItem('Email'),
                                         Purchases: userPurchases,
                                         Stocks: userStocks,
                                         Profit: userProfits,
                                         Loss: userLosses,
                                         pfp: localStorage.getItem('PFP'),
-                                        MathsLevel: userMathsLevel + 1,
+                                        MathsLevel: userMathsLevel,
                                         CrypticLevel: userCrypticLevel,
                                         GeneralLevel: userGeneralLevel,
-                                        QuizLevel: userQuizLevel,
+                                        QuizLevel: userQuizLevel + 1,
                                     });
                                     getData()
                                     notify2()
-                                    router.push('/math')
+                                    router.push('/quiz')
                                 }
                                 else {
                                     notify()
@@ -95,4 +103,4 @@ function four() {
     )
 }
 
-export default four
+export default one
