@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
@@ -11,7 +12,7 @@ function gamebar() {
                 <div className='dark-glassmorph p-3'>
                     <h1 className='text-3xl text-white font-Bebas text-center'>Maths for nerds</h1>
                     <p className='text-md text-white font-Bebas text-center my-3'>Do you like basic maths that you studied in your primary school? Well you can also earn points by doing these questions!</p>
-                    <a href='/math'>
+                    <Link href='/math'>
                     <div className="text-center">
                         <button class="relative font-Bebas text-2xl inline-flex items-center justify-center p-0.5 mr-2 overflow-hidden font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-blue-500 group-hover:from-pink-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none">
                         <span class="relative px-5 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
@@ -19,7 +20,7 @@ function gamebar() {
                         </span>
                         </button>
                     </div>
-                    </a>
+                    </Link>
                 </div>
                 <div className='dark-glassmorph p-3'>
                     <h1 className='text-3xl text-white font-Bebas text-center'>Cryptic Hunt</h1>
@@ -35,7 +36,7 @@ function gamebar() {
                 <div className='dark-glassmorph p-3'>
                     <h1 className='text-3xl text-white font-Bebas text-center'>General Knowledge</h1>
                     <p className='text-md text-white font-Bebas text-center my-3'>I think you should have general knowledge, should not you? Well I think you need to some help while answering these questions, Dont forget to use Google!</p>
-                    <a href='/gk'>
+                    <Link href='/gk'>
                     <div className="text-center">
                         <button class="relative font-Bebas text-2xl inline-flex items-center justify-center p-0.5 mr-2 overflow-hidden font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-blue-500 group-hover:from-pink-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none">
                         <span class="relative px-5 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
@@ -43,7 +44,7 @@ function gamebar() {
                         </span>
                         </button>
                     </div>
-                    </a>
+                    </Link>
                 </div>
                 <div className='dark-glassmorph p-3'>
                     <h1 className='text-3xl text-white font-Bebas text-center'>Tech Quiz</h1>
