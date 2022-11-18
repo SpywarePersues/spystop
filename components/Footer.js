@@ -10,7 +10,7 @@ export default function Footer(){
         setToken(localStorage.getItem('Token'))
     }, [])
     return(
-        <div className="text-gray-300 mx-auto glassmorph py-10 text-sm font-light font-Koho mt-8">
+        <div className="text-gray-300 mx-auto dark-glassmorph py-10 text-sm font-light font-Koho mt-8">
             <div className="bg-gray-500 w-11/12 mx-auto h-[2px] my-3"></div>
             <div className="w-11/12 lg:w-10/12 flex flex-wrap justify-around mx-auto">
                 <div className="font-Koho  font-bold">

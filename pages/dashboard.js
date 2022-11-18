@@ -114,7 +114,7 @@ export default function Dashboard(){
                             </div>
                         </div>
                     </div>
-                    <div className="dark-glassmorph my-4 lg:w-[29%] py-5 pl-5 rounded-lg md:ml-14">
+                    <div className="dark-glassmorph md:my-0 my-4 lg:w-[29%] py-5 pl-5 rounded-lg md:ml-14 p-8">
                     <p className="text-center font-Bebas text-4xl py-2">Stocks!</p>
                         <Line data={data}/>
                         <div className="pt-10">

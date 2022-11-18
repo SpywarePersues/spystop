@@ -60,7 +60,7 @@ export default function players(){
             {token ? (<div className='my-10 p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1'>
                 {firedata.map((data) => {
                     return(
-                        <div key={data.id} className="glassmorph md:mx-10 mx-4 w-11/12 rounded-lg hover:scale-[1.01] transition-scale duration-300 my-3 p-4">
+                        <div key={data.id} className="dark-glassmorph md:mx-10 mx-4 w-11/12 rounded-lg hover:scale-[1.01] transition-scale duration-300 my-3 p-4">
                             <div className='md:flex'>
                             <img src={data.pfp} className="rounded-md h-[5.5rem] mx-auto md:mx-0" alt='' />
                             <h1 className='font-bold my-7 mx-4 font-mono text-xl text-gray-200'>{data.Username}</h1>

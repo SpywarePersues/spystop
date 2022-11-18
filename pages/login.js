@@ -81,7 +81,7 @@ function login() {
             {!token ? (
                 <div><h1 className='text-6xl font-Bungee text-center pb-5 pt-5 font-semibold'>Login</h1>
                 <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1 gap-14">
-                    <div class="rounded overflow-hidden shadow-lg glassmorph mx-auto w-11/12 lg:w-5/12">
+                    <div class="rounded overflow-hidden shadow-lg dark-glassmorph mx-auto w-11/12 lg:w-5/12">
                         <img class="w-24 block mx-auto my-auto mt-5 mb-2 rounded-full border-solid border-green-600 border-4" src="https://cdn.discordapp.com/attachments/910730837996224584/1028238445778309171/media_discordapp_net-unknown_1.png" alt="Google" />
                         <div class="px-6 py-4">
                             <div class="font-bold text-xl text-center text-white">Google</div>
@@ -90,7 +90,7 @@ function login() {
                         </div>
                     </div>
                 </div>
-            ) : (<div className="user-container items-center w-6/12 my-20 mx-auto flex justify-center glassmorph p-10 rounded-lg">
+            ) : (<div className="user-container items-center w-6/12 my-20 mx-auto flex justify-center dark-glassmorph p-10 rounded-lg">
             <div className="glassmorph rounded-full p-3">
                 <img className="outline-none rounded-lg"  src={localStorage.getItem("PFP")} style={{width:"200px"}} alt=""/>
             </div>  
