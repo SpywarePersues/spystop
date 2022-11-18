@@ -64,8 +64,8 @@ export default function players(){
                             <div className='md:flex'>
                             <img src={data.pfp} className="rounded-md h-[5.5rem] mx-auto md:mx-0" alt='' />
                             <h1 className='font-bold my-7 mx-4 font-mono text-xl text-gray-200'>{data.Username}</h1>
-                            <h1 className='mx-4 text-gray-300 font-Bebas md:text-xl my-7'><img src="./coin.gif" className="w-5 inline-flex"/> {data.Balance}</h1>
-                            <h1 className='font-bold my-7 mx-4 font-mono text-xl text-gray-200'><img src="./coin.gif" className="w-5 inline-flex" /> Stocks: {data.Stocks}</h1>
+                            <h1 className='mx-4 text-gray-300 font-Bebas md:text-2xl my-7'><img src="./coin.gif" className="w-5 inline-flex"/> {data.Balance}</h1>
+                            <h1 className='mx-4 text-gray-300 font-Bebas md:text-xl my-7 text-gray-200'><img src="./coin.gif" className="w-5 inline-flex" /> Stocks: {data.Stocks}</h1>
                             </div>
                         </div>
                     )
