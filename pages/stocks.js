@@ -37,7 +37,7 @@ const data = {
     datasets: [
         {
         label: "Price per unit",
-        data: [902, 420, 780, 1004, 1045, 1100],
+        data: [902, 420, 780, 1004, 2045, 3400],
         fill: true,
         borderColor: "rgba(75,192,192,1)",
         backgroundColor: "rgba(75,192,192,0.2)"
