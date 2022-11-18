@@ -60,11 +60,11 @@ body .purchases::-webkit-scrollbar-thumb
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: rgb(65, 63, 63); 
+    background: rgba(0, 0, 0, 0.345); 
     border-radius: 10px;
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #3d3d3d; 
+    background: rgba(0, 0, 0, 0.545); 
   }
