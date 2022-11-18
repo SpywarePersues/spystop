@@ -33,11 +33,11 @@ ChartJS.register(
 )
 
 const data = {
-    labels: ["12 Nov", "13 Nov", "14 Nov", "15 Nov", "16 Nov", "17 Nov"],
+    labels: ["13 Nov", "15 Nov", "15 Nov", "16 Nov", "17 Nov", "18 Nov"],
     datasets: [
         {
         label: "Price per unit",
-        data: [1110, 902, 420, 780, 1004, 1045],
+        data: [902, 420, 780, 1004, 1045, 1100],
         fill: true,
         borderColor: "rgba(75,192,192,1)",
         backgroundColor: "rgba(75,192,192,0.2)"
@@ -56,6 +56,7 @@ export default function Dashboard(){
     const [userLosses, setUserLosses] = useState()
     const [userStocks, setUserStocks] = useState()
     const [investing, setInvesting] = useState(0)
+    const [converting, setConverting] = useState(0)
     const [userQuizLevel, setUserQuizLevel] = useState()
     const [userGeneralLevel, setUserGeneralLevel] = useState()
     const [userCrypticLevel, setUserCrypticLevel] = useState()
@@ -93,6 +94,8 @@ export default function Dashboard(){
 
     const notify = () => toast.error("You do not have enough money to invest in.");
     const notify2 = () => toast.success("Successfully Invested!");
+    const notify3 = () => toast.error("You do not have enough stocks to convert it to In-game balance.");
+    const notify4 = () => toast.success("Successfully Converted!");
 
     const databaseRef2 = collection(db, 'accounts')
     return(
@@ -134,6 +137,32 @@ export default function Dashboard(){
                                     notify()
                                 }
                             }}>INVEST</button>
+                            <h1 className="text-white text-center text-4xl my-6 font-Bebas">STOCKS TO IN-GAME BALANCE</h1>
+                    <label className="text-center mx-auto block my-4 text-2xl text-white font-Bebas" >Money to convert</label>
+                    <input className="glassmorph p-3 w-6/12 mx-auto block text-white outline-none" type="number" onChange={event => setConverting(Number(event.target.value))}/>
+                    <button className="font-Bebas text-center button mt-2 bg-gradient-to-r from-blue-500 to-pink-600 px-5 text-gray-200 w-fit py-2 rounded-md text-xl mx-auto block" onClick={async () => {
+                                if(userStocks >= converting){
+                                    const docRef = await updateDoc(doc(db, 'accounts', `${localStorage.getItem('Email')}`), {
+                                        Username: localStorage.getItem('Name'),
+                                        Balance: balance+ converting,
+                                        email: localStorage.getItem('Email'),
+                                        Purchases: userPurchases,
+                                        Stocks: userStocks - converting,
+                                        Profit: userProfits,
+                                        Loss: userLosses,
+                                        pfp: localStorage.getItem('PFP'),
+                                        MathsLevel: userMathsLevel,
+                                        CrypticLevel: userCrypticLevel,
+                                        GeneralLevel: userGeneralLevel,
+                                        QuizLevel: userQuizLevel,
+                                    });
+                                    notify4()
+                                    getData()
+                                }
+                                else {
+                                    notify3()
+                                }
+                            }}>CONVERT</button>
                             <h1 className="font-Bebas text-4xl text-white text-center my-6">MY STOCKS</h1>
                             <div className="">
                             <div className="dark-glassmorph text-white font-Bebas p-4 mx-auto w-8/12 my-5">

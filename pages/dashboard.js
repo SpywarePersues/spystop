@@ -31,11 +31,11 @@ ChartJS.register(
 )
 
 const data = {
-    labels: ["12 Nov", "13 Nov", "14 Nov", "15 Nov", "16 Nov", "17 Nov"],
+    labels: ["13 Nov", "15 Nov", "15 Nov", "16 Nov", "17 Nov", "18 Nov"],
     datasets: [
         {
         label: "Price per unit",
-        data: [1110, 902, 420, 780, 1004, 1045],
+        data: [902, 420, 780, 1004, 1045, 1100],
         fill: true,
         borderColor: "rgba(75,192,192,1)",
         backgroundColor: "rgba(75,192,192,0.2)"
