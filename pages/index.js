@@ -10,8 +10,8 @@ export default function Home() {
     <div className="text-gray-900 w-screen h-screen overflow-x-hidden">
       <img src="./wave-bg.png" alt="wave" className="fixed top-0 -z-10 h-screen"/>
       <Navbar title="Home" />
-      <h1 className="font-Bungee text-center text-8xl my-6">SPYSTOP</h1>
-      <p className="font-Bungee text-center text-4xl">Your stop for games!</p>
+      <h1 className="font-Bungee text-center text-6xl md:text-8xl my-6">SPYSTOP</h1>
+      <p className="font-Bungee text-center text-3xl md:text-4xl">Your stop for games!</p>
       <div className="dark-glassmorph p-4 w-7/12 mx-auto text-xl text-gray-900 my-6">
       <p className="text-center font-Bungee my-3 text-3xl">PLAY. EARN. REDEEM</p>
       Welcome to <span className="underline text-green-700">SpyStop</span>, play awesome games built almost half a decade ago, and get rewarded with our new <span className="underline text-purple-700">digital coins</span>. Redeem your coins and get <span className="underline text-yellow-500">Premium stuffs</span> for different games.

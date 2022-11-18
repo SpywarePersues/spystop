@@ -15,8 +15,8 @@ export default function Footer(){
             <div className="w-11/12 lg:w-10/12 flex flex-wrap justify-around mx-auto">
                 <div className="font-Koho  font-bold">
                     <p className="text-2xl">SpyStop</p>
-                    <p className="lg:pt-10">©SpyStop 2022</p>
-                    <p>Created by SpywarePerseus (Supriyo). All Rights Reserved.</p>
+                    <p className="py-4 lg:pt-10">©SpyStop 2022</p>
+                    <p className="pb-2">Created by SpywarePerseus (Supriyo). All Rights Reserved.</p>
                 </div>
                 <div>
                     <p className="font-Koho text-2xl font-bold mb-2">Pages</p>
