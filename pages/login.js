@@ -41,7 +41,7 @@ function login() {
                 const registerDetails = async () => {
                     const docRef = await setDoc(doc(db, 'accounts', `${localStorage.getItem('Email')}`), {
                             Username: localStorage.getItem('Name'),
-                            Balance: 1500,
+                            Balance: 10000,
                             email: localStorage.getItem('Email'),
                             Purchases: [],
                             Stocks: 0,
