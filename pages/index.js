@@ -13,7 +13,7 @@ export default function Home() {
       <h1 className="font-Bungee text-center text-8xl my-6">SPYSTOP</h1>
       <p className="font-Bungee text-center text-4xl">Your stop for games!</p>
       <div className="glassmorph p-4 w-7/12 mx-auto text-xl text-gray-900 my-6">
-      <p className="text-center font-Bungee my-3 text-3xl">PLAY.EARN.REDEEM</p>
+      <p className="text-center font-Bungee my-3 text-3xl">PLAY. EARN. REDEEM</p>
       Welcome to <span className="underline text-green-700">SpyStop</span>, play awesome games built almost half a decade ago, and get rewarded with our new <span className="underline text-purple-700">digital coins</span>. Redeem your coins and get <span className="underline text-yellow-500">Premium stuffs</span> for different games.
       But wait, There is a slight problem, cannot make <span className="underline text-red-500">friends</span> in online web games? well we got it covered for you!.
       <p className="text-center font-Bungee my-3 text-3xl">#We Set The Stop</p>
