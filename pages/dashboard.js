@@ -96,11 +96,12 @@ export default function Dashboard(){
                                 {localStorage.getItem('Name')}
                                 <br></br>
                                 <p>{localStorage.getItem('Email')}</p>
-                                Balance: <img src="./coin.gif" className="w-5 inline-flex"/> {userBalance}</div>
+                                <p>Balance: <img src="./coin.gif" className="w-5 inline-flex"/> {userBalance}</p>
+                                <p>Stocks: <img src="./coin.gif" className="w-5 inline-flex"/> {userStocks}</p></div>
                         </div>
                         <div className="pt-10">
                             <p className="text-center font-Bebas text-3xl mb-3">Purchases</p>
-                            <div className="lg:h-[430px] lg:overflow-y-scroll purchases overflow-x-hidden" id="style3">
+                            <div className="lg:h-[300px] lg:overflow-y-scroll purchases overflow-x-hidden" id="style3">
                                 {
                                     userPurchases.map((data) => {
                                         return(
@@ -119,12 +120,6 @@ export default function Dashboard(){
                     <p className="text-center font-Bebas text-4xl py-2">Stocks!</p>
                         <Line data={data}/>
                         <div className="pt-10">
-                            <p className="text-center font-Bebas text-3xl mb-3">Real Time Stocks Value</p>
-                            <div className="lg:h-[50px] overflow-x-hidden" id="style3">
-                                <h1 className="font-Bebas text-2xl text-center"><img src="./coin.gif" className="w-5 inline-flex"/> {userStocks}</h1>
-                            </div>
-                        </div>
-                        <div className="pt-4">
                             <p className="text-center font-Bebas text-3xl mb-3">Real Time <span className="text-green-600">Profit</span></p>
                             <div className="lg:h-[50px] purchases overflow-x-hidden" id="style3">
                                 <h1 className="font-Bebas text-2xl text-center"><img src="./coin.gif" className="w-5 inline-flex"/> {userProfits}</h1>
