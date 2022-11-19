@@ -33,11 +33,11 @@ ChartJS.register(
 )
 
 const data = {
-    labels: ["26 Oct", "27 Oct" ,"28 Oct", "29 Oct", "30 Oct", "31 Oct", "01 Nov", "02 Nov", "03 Nov", "04 Nov", "05 Nov", "06 Nov", "07 Nov", "08 Nov", "09 Nov", "10 Nov", "11 Nov", "12 Nov", "13 Nov", "14 Nov", "15 Nov", "16 Nov", "17 Nov", "18 Nov"],
+    labels: ["26 Oct", "27 Oct" ,"28 Oct", "29 Oct", "30 Oct", "31 Oct", "01 Nov", "02 Nov", "03 Nov", "04 Nov", "05 Nov", "06 Nov", "07 Nov", "08 Nov", "09 Nov", "10 Nov", "11 Nov", "12 Nov", "13 Nov", "14 Nov", "15 Nov", "16 Nov", "17 Nov", "18 Nov", "19 Nov"],
     datasets: [
         {
         label: "Price per unit",
-        data: [902, 420, 780, 1004, 2045, 3400, 4560, 2313, 5343, 211, 543, 85, 843, 903, 356, 1245, 3436, 4657, 6788, 3464, 3756, 2353, 3643, 6436, 3675],
+        data: [902, 420, 780, 1004, 2045, 3400, 4560, 2313, 5343, 211, 543, 85, 843, 903, 356, 1245, 3436, 4657, 6788, 3464, 3756, 2353, 3643, 6436, 3675, 1468],
         fill: true,
         borderColor: "rgba(75,192,192,1)",
         backgroundColor: "rgba(75,192,192,0.2)"
