@@ -52,6 +52,7 @@ export default function Dashboard(){
     const [userPurchases, setUserPurchases] = useState()
     const [userProfits, setUserProfits] = useState()
     const [userLosses, setUserLosses] = useState()
+    const [userStocks, setUserStocks] = useState()
 
     const getData = async () => {
         await getDocs(databaseRef)
@@ -62,6 +63,7 @@ export default function Dashboard(){
                     setUserPurchases(data.data().Purchases)
                     setUserProfits(data.data().Profit)
                     setUserLosses(data.data().Loss)
+                    setUserStocks(data.data().Stocks)
                     setMounted(true)
                 }
             }))
@@ -86,7 +88,7 @@ export default function Dashboard(){
             {
                 mounted ? 
                 token ? 
-                <div className="lg:flex font-Inter text-gray-100 mx-12">
+                <div className="lg:flex font-Inter text-gray-100 mx-3 md:mx-12">
                     <div className="dark-glassmorph lg:w-[29%] py-5 pl-5 rounded-lg">
                         <div className="lg:flex">
                             <img src={localStorage.getItem('PFP')} className="w-28 mx-auto lg:mx-0 rounded-full lg:rounded-lg"/>
@@ -98,7 +100,7 @@ export default function Dashboard(){
                         </div>
                         <div className="pt-10">
                             <p className="text-center font-Bebas text-3xl mb-3">Purchases</p>
-                            <div className="lg:h-[300px] lg:overflow-y-scroll purchases overflow-x-hidden" id="style3">
+                            <div className="lg:h-[430px] lg:overflow-y-scroll purchases overflow-x-hidden" id="style3">
                                 {
                                     userPurchases.map((data) => {
                                         return(
@@ -117,14 +119,20 @@ export default function Dashboard(){
                     <p className="text-center font-Bebas text-4xl py-2">Stocks!</p>
                         <Line data={data}/>
                         <div className="pt-10">
+                            <p className="text-center font-Bebas text-3xl mb-3">Real Time Stocks Value</p>
+                            <div className="lg:h-[50px] overflow-x-hidden" id="style3">
+                                <h1 className="font-Bebas text-2xl text-center"><img src="./coin.gif" className="w-5 inline-flex"/> {userStocks}</h1>
+                            </div>
+                        </div>
+                        <div className="pt-4">
                             <p className="text-center font-Bebas text-3xl mb-3">Real Time <span className="text-green-600">Profit</span></p>
-                            <div className="lg:h-[50px] lg:overflow-y-scroll purchases overflow-x-hidden" id="style3">
+                            <div className="lg:h-[50px] purchases overflow-x-hidden" id="style3">
                                 <h1 className="font-Bebas text-2xl text-center"><img src="./coin.gif" className="w-5 inline-flex"/> {userProfits}</h1>
                             </div>
                         </div>
                         <div className="pt-4">
                             <p className="text-center font-Bebas text-3xl mb-3">Real Time <span className="text-red-600">Loss</span></p>
-                            <div className="lg:h-[50px] lg:overflow-y-scroll purchases overflow-x-hidden" id="style3">
+                            <div className="lg:h-[50px] purchases overflow-x-hidden" id="style3">
                                 <h1 className="font-Bebas text-2xl text-center"><img src="./coin.gif" className="w-5 inline-flex"/> {userLosses}</h1>
                             </div>
                         </div>

@@ -107,7 +107,7 @@ export default function Dashboard(){
                 token ? 
                 <div>
                     <ToastContainer />
-                    <div className="dark-glassmorph w-8/12 mx-auto p-3">
+                    <div className="dark-glassmorph w-11/12 md:w-8/12 mx-auto p-3">
                         <h1 className="font-Bebas text-4xl text-white text-center my-4">STOCKS GRAPH</h1>
                         <Line data={data} />
                     </div>
@@ -165,19 +165,19 @@ export default function Dashboard(){
                             }}>CONVERT</button>
                             <h1 className="font-Bebas text-4xl text-white text-center my-6">MY STOCKS</h1>
                             <div className="">
-                            <div className="dark-glassmorph text-white font-Bebas p-4 mx-auto w-8/12 my-5">
+                            <div className="dark-glassmorph text-white font-Bebas p-4 mx-auto w-11/12 md:w-8/12 my-5">
                                     <h1 className="text-4xl text-center">Total Stocks Bought</h1>
                                     <p className="text-white text-xl text-center m-2"><img src="./coin.gif" className="w-5 inline-flex"/> {userStocks}</p>
                                 </div>
-                                <div className="dark-glassmorph text-white font-Bebas p-4 mx-auto w-8/12 my-5">
+                                <div className="dark-glassmorph text-white font-Bebas p-4 mx-auto w-11/12 md:w-8/12 my-5">
                                     <h1 className="text-4xl text-center">Total Balance</h1>
                                     <p className="text-white text-xl text-center m-2"><img src="./coin.gif" className="w-5 inline-flex"/> {balance}</p>
                                 </div>
-                                <div className="dark-glassmorph text-white font-Bebas p-4 mx-auto w-8/12 my-4">
+                                <div className="dark-glassmorph text-white font-Bebas p-4 mx-auto w-11/12 md:w-8/12 my-5">
                                     <h1 className="text-4xl text-center">Total Profit</h1>
                                     <p className="text-white text-xl text-center m-2"><img src="./coin.gif" className="w-5 inline-flex"/> {userProfits}</p>
                                 </div>
-                                <div className="dark-glassmorph text-white font-Bebas p-4 mx-auto w-8/12 my-4">
+                                <div className="dark-glassmorph text-white font-Bebas p-4 mx-auto w-11/12 md:w-8/12 my-5">
                                     <h1 className="text-4xl text-center">Total Loss</h1>
                                     <p className="text-white text-xl text-center m-2"><img src="./coin.gif" className="w-5 inline-flex"/> {userLosses}</p>
                                 </div>
