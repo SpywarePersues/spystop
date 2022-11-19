@@ -102,10 +102,9 @@ export default function Dashboard(){
                                 {
                                     userPurchases.map((data) => {
                                         return(
-                                        <div className="flex py-2" key={data.price}>
-                                            <img src={data.image} className="w-16 h-12 rounded-sm" />
-                                            <div className="px-2">
+                                        <div className="flex py-2 my-3 dark-glassmorph w-[97%] p-2" key={data.id}>                                            <div className="px-2">
                                                 <p>{data.item}</p>
+                                                <p>Answer: {data.answer}</p>
                                                 <p>Bought for: <img src="./coin.gif" className="w-5 inline-flex"/> {data.price}</p>
                                             </div>
                                         </div>

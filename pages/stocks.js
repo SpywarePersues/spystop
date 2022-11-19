@@ -169,6 +169,10 @@ export default function Dashboard(){
                                     <h1 className="text-4xl text-center">Total Stocks Bought</h1>
                                     <p className="text-white text-xl text-center m-2"><img src="./coin.gif" className="w-5 inline-flex"/> {userStocks}</p>
                                 </div>
+                                <div className="dark-glassmorph text-white font-Bebas p-4 mx-auto w-8/12 my-5">
+                                    <h1 className="text-4xl text-center">Total Balance</h1>
+                                    <p className="text-white text-xl text-center m-2"><img src="./coin.gif" className="w-5 inline-flex"/> {balance}</p>
+                                </div>
                                 <div className="dark-glassmorph text-white font-Bebas p-4 mx-auto w-8/12 my-4">
                                     <h1 className="text-4xl text-center">Total Profit</h1>
                                     <p className="text-white text-xl text-center m-2"><img src="./coin.gif" className="w-5 inline-flex"/> {userProfits}</p>

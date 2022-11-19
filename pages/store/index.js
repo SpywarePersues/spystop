@@ -76,7 +76,7 @@ export default function index(){
             <img src="./wave-bg.png" alt="wave" className="fixed top-0 -z-10 h-screen"/>
             <ToastContainer />
             <h1 className='text-6xl font-Bungee text-center pb-5 pt-5 font-semibold'>Deal of the Month</h1>
-            {token ? (<div className='my-10 p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4'>
+            {token ? (<div className='my-10 p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3'>
                 {firedata.map((data) => {
                     return(
                         <div key={data.id} className="dark-glassmorph md:mx-10 mx-4 w-11/12 rounded-lg hover:scale-105 transition-scale duration-300 my-3 p-4">
@@ -93,7 +93,7 @@ export default function index(){
                                         Stocks: userStocks,
                                         Profit: userProfit,
                                         Loss: userLoss,
-                                        Purchases: arrayUnion({item: data.name, image: data.image, price: data.price}),
+                                        Purchases: arrayUnion({item: data.name, image: data.image, price: data.price, answer: data.answer}),
                                         pfp: localStorage.getItem('PFP'),
                                         MathsLevel: userMathsLevel,
                                         CrypticLevel: userCrypticLevel,
