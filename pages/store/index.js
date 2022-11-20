@@ -22,6 +22,8 @@ export default function index(){
     const [userGeneralLevel, setUserGeneralLevel] = UseState()
     const [userCrypticLevel, setUserCrypticLevel] = UseState()
     const [userMathsLevel, setUserMathsLevel] = UseState()
+    const [userLogoLevel, setUserLogoLevel] = UseState()
+
     
     UseEffect(() => {
         getData()
@@ -51,6 +53,8 @@ export default function index(){
                     setUserCrypticLevel(data.data().CrypticLevel)
                     setUserGeneralLevel(data.data().GeneralLevel)
                     setUserQuizLevel(data.data().QuizLevel)
+                    setUserLogoLevel(data.data().LogoLevel)
+
                 }
             })
         })
@@ -99,6 +103,7 @@ export default function index(){
                                         CrypticLevel: userCrypticLevel,
                                         GeneralLevel: userGeneralLevel,
                                         QuizLevel: userQuizLevel,
+                                        LogoLevel: userLogoLevel,
                                     });
                                     notify2()
                                     getAccountsData()

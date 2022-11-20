@@ -21,6 +21,8 @@ function index() {
     const [userGeneralLevel, setUserGeneralLevel] = UseState()
     const [userCrypticLevel, setUserCrypticLevel] = UseState()
     const [userMathsLevel, setUserMathsLevel] = UseState()
+    const [userLogoLevel, setUserLogoLevel] = UseState()
+
 
     const getData = async () => {
         await getDocs(databaseRef)
@@ -36,6 +38,7 @@ function index() {
                     setUserCrypticLevel(data.data().CrypticLevel)
                     setUserGeneralLevel(data.data().GeneralLevel)
                     setUserQuizLevel(data.data().QuizLevel)
+                    setUserLogoLevel(data.data().LogoLevel)
                 }
             }))
         })

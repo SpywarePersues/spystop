@@ -23,6 +23,7 @@ function three() {
     const [userGeneralLevel, setUserGeneralLevel] = UseState()
     const [userCrypticLevel, setUserCrypticLevel] = UseState()
     const [userMathsLevel, setUserMathsLevel] = UseState()
+    const [userLogoLevel, setUserLogoLevel] = UseState()
 
     const getData = async () => {
         await getDocs(databaseRef)
@@ -38,6 +39,8 @@ function three() {
                     setUserCrypticLevel(data.data().CrypticLevel)
                     setUserGeneralLevel(data.data().GeneralLevel)
                     setUserQuizLevel(data.data().QuizLevel)
+                    setUserLogoLevel(data.data().LogoLevel)
+
                     if(data.data().CrypticLevel === 3){
                     }
                     else {
@@ -81,6 +84,8 @@ function three() {
                                         CrypticLevel: userCrypticLevel + 1,
                                         GeneralLevel: userGeneralLevel,
                                         QuizLevel: userQuizLevel,
+                                        LogoLevel: userLogoLevel,
+
                                     });
                                     getData()
                                     router.push('/cryptic')

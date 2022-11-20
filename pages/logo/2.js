@@ -7,7 +7,7 @@ import { collection, doc, getDocs, updateDoc } from 'firebase/firestore'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-function nine() {
+function two() {
     
     const databaseRef = collection(db, 'accounts')
     const [firedata, setFiredata] = UseState()
@@ -24,7 +24,7 @@ function nine() {
     const [userCrypticLevel, setUserCrypticLevel] = UseState()
     const [userMathsLevel, setUserMathsLevel] = UseState()
     const [userLogoLevel, setUserLogoLevel] = UseState()
-
+    
 
     const getData = async () => {
         await getDocs(databaseRef)
@@ -42,10 +42,10 @@ function nine() {
                     setUserQuizLevel(data.data().QuizLevel)
                     setUserLogoLevel(data.data().LogoLevel)
 
-                    if(data.data().GeneralLevel === 9){
+                    if(data.data().LogoLevel === 2){
                     }
                     else {
-                        router.push('/gk')
+                        router.push('/logo')
                     }
                 }
             }))
@@ -63,26 +63,19 @@ function nine() {
     const notify2 = () => toast.success("Correct Answer");
     return (
         <div>
-            <Navbar title="Lvl - 9 General Knowledge" />
+            <Navbar title="Lvl - 2 Guess the correct Logo" />
             <img src="../../wave-bg.png" alt="wave" className="fixed top-0 -z-10 h-screen"/>
             <ToastContainer />
-            <h1 className='font-Bungee text-5xl text-white text-center mb-6'>Level 9</h1>
-            <h1 className='font-Bebas text-5xl text-white text-center my-10'>first person to climb mount everest</h1>
-            <div className='md:flex w-10/12 md:w-[37%] mx-auto'>
-                <h1 className='text-white text-xl my-4 mx-10 font-Bebas'>1) Edmund Hillary and Tenzing Norgay</h1>
-                <h1 className='text-white text-xl my-4 mx-10 font-Bebas'>2) Edmund Hillary</h1>
-            </div>
-            <div className='md:flex w-10/12 md:w-[37%] mx-auto mb-10'>
-                <h1 className='text-white text-xl my-4 mx-10 font-Bebas'>3) Tenzing Norgay</h1>
-                <h1 className='text-white text-xl my-4 mx-10 font-Bebas'>4) Edmuld Hillary and Tenzing Norguay</h1>
-            </div>
-            <h1 className='text-white my-4 mx-10 text-center font-Bebas text-2xl'>Enter the option number only, For example 1, 2, 3, 4.</h1>
+            <h1 className='font-Bungee text-5xl text-white text-center mb-6'>Level 2</h1>
+            <h1 className='font-Bebas text-5xl text-white text-center my-10'>Coca Cola Logo</h1>
+            <img src='https://cdn.discordapp.com/attachments/910730837996224584/1043851257087000614/unknown.png' className='w-10/12 md:w-4/12 mx-auto rounded-lg hover:scale-105 transition-all duration-200 my-6' />
+            <h1 className='text-white my-4 mx-10 text-center font-Bebas text-2xl'>Enter the option number only, Available options: 1 and 2.</h1>
             <input className="glassmorph p-3 w-6/12 mx-auto block text-white outline-none" type="number" onChange={event => setAnswer(Number(event.target.value))}/>
             <button className="font-Bebas text-center button mt-2 bg-gradient-to-r from-blue-500 to-pink-600 px-5 text-gray-200 w-fit py-2 rounded-md text-xl mx-auto block" onClick={async () => {
                                 if(answer === 1){
                                     const docRef = await updateDoc(doc(db, 'accounts', `${localStorage.getItem('Email')}`), {
                                         Username: localStorage.getItem('Name'),
-                                        Balance: balance + 300,
+                                        Balance: balance + 100,
                                         email: localStorage.getItem('Email'),
                                         Purchases: userPurchases,
                                         Stocks: userStocks,
@@ -91,14 +84,13 @@ function nine() {
                                         pfp: localStorage.getItem('PFP'),
                                         MathsLevel: userMathsLevel,
                                         CrypticLevel: userCrypticLevel,
-                                        GeneralLevel: userGeneralLevel + 1,
+                                        GeneralLevel: userGeneralLevel,
                                         QuizLevel: userQuizLevel,
-                                        LogoLevel: userLogoLevel,
-
+                                        LogoLevel: userLogoLevel + 1,
                                     });
                                     getData()
+                                    router.push('/logo')
                                     notify2()
-                                    router.push('/gk')
                                 }
                                 else {
                                     notify()
@@ -109,4 +101,4 @@ function nine() {
     )
 }
 
-export default nine
+export default two

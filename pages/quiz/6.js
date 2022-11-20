@@ -23,6 +23,7 @@ function six() {
     const [userGeneralLevel, setUserGeneralLevel] = UseState()
     const [userCrypticLevel, setUserCrypticLevel] = UseState()
     const [userMathsLevel, setUserMathsLevel] = UseState()
+    const [userLogoLevel, setUserLogoLevel] = UseState()
 
     const getData = async () => {
         await getDocs(databaseRef)
@@ -38,6 +39,8 @@ function six() {
                     setUserCrypticLevel(data.data().CrypticLevel)
                     setUserGeneralLevel(data.data().GeneralLevel)
                     setUserQuizLevel(data.data().QuizLevel)
+                    setUserLogoLevel(data.data().LogoLevel)
+
                     if(data.data().QuizLevel === 6){
                     }
                     else {
@@ -89,6 +92,8 @@ function six() {
                                         CrypticLevel: userCrypticLevel,
                                         GeneralLevel: userGeneralLevel,
                                         QuizLevel: userQuizLevel + 1,
+                                        LogoLevel: userLogoLevel,
+
                                     });
                                     getData()
                                     notify2()

@@ -52,6 +52,7 @@ function login() {
                             CrypticLevel: 0,
                             GeneralLevel: 0,
                             QuizLevel: 0,
+                            LogoLevel: 0,
                         });
                 }
                 registered ? console.log('registered') : registerDetails()

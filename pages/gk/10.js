@@ -23,6 +23,8 @@ function ten() {
     const [userGeneralLevel, setUserGeneralLevel] = UseState()
     const [userCrypticLevel, setUserCrypticLevel] = UseState()
     const [userMathsLevel, setUserMathsLevel] = UseState()
+    const [userLogoLevel, setUserLogoLevel] = UseState()
+
 
     const getData = async () => {
         await getDocs(databaseRef)
@@ -38,6 +40,8 @@ function ten() {
                     setUserCrypticLevel(data.data().CrypticLevel)
                     setUserGeneralLevel(data.data().GeneralLevel)
                     setUserQuizLevel(data.data().QuizLevel)
+                    setUserLogoLevel(data.data().LogoLevel)
+
                     if(data.data().GeneralLevel === 10){
                     }
                     else {
@@ -89,6 +93,8 @@ function ten() {
                                         CrypticLevel: userCrypticLevel,
                                         GeneralLevel: userGeneralLevel + 1,
                                         QuizLevel: userQuizLevel,
+                                        LogoLevel: userLogoLevel,
+
                                     });
                                     getData()
                                     notify2()

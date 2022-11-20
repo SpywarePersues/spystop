@@ -61,6 +61,7 @@ export default function Dashboard(){
     const [userGeneralLevel, setUserGeneralLevel] = useState()
     const [userCrypticLevel, setUserCrypticLevel] = useState()
     const [userMathsLevel, setUserMathsLevel] = useState()
+    const [userLogoLevel, setUserLogoLevel] = useState()
 
 
     const getData = async () => {
@@ -77,6 +78,7 @@ export default function Dashboard(){
                     setUserCrypticLevel(data.data().CrypticLevel)
                     setUserGeneralLevel(data.data().GeneralLevel)
                     setUserQuizLevel(data.data().QuizLevel)
+                    setUserLogoLevel(data.data().LogoLevel)
                     setMounted(true)
                 }
             }))
@@ -129,6 +131,7 @@ export default function Dashboard(){
                                         CrypticLevel: userCrypticLevel,
                                         GeneralLevel: userGeneralLevel,
                                         QuizLevel: userQuizLevel,
+                                        LogoLevel: userLogoLevel,
                                     });
                                     notify2()
                                     getData()
@@ -155,6 +158,7 @@ export default function Dashboard(){
                                         CrypticLevel: userCrypticLevel,
                                         GeneralLevel: userGeneralLevel,
                                         QuizLevel: userQuizLevel,
+                                        LogoLevel: userLogoLevel
                                     });
                                     notify4()
                                     getData()

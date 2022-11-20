@@ -23,6 +23,8 @@ function zero() {
     const [userGeneralLevel, setUserGeneralLevel] = UseState()
     const [userCrypticLevel, setUserCrypticLevel] = UseState()
     const [userMathsLevel, setUserMathsLevel] = UseState()
+    const [userLogoLevel, setUserLogoLevel] = UseState()
+
 
     const getData = async () => {
         await getDocs(databaseRef)
@@ -38,6 +40,8 @@ function zero() {
                     setUserCrypticLevel(data.data().CrypticLevel)
                     setUserGeneralLevel(data.data().GeneralLevel)
                     setUserQuizLevel(data.data().QuizLevel)
+                    setUserLogoLevel(data.data().LogoLevel)
+
                     if(data.data().MathsLevel === 0){
                     }
                     else {
@@ -80,6 +84,7 @@ function zero() {
                                         CrypticLevel: userCrypticLevel,
                                         GeneralLevel: userGeneralLevel,
                                         QuizLevel: userQuizLevel,
+                                        LogoLevel: userLogoLevel,
                                     });
                                     getData()
                                     notify2()
