@@ -42,7 +42,8 @@ export default function CoinsGraph() {
       <div className="dark-glassmorph lg:mx-5 my-5 lg:my-0 rounded-lg">
           <p className="text-center font-Bebas text-4xl py-2">Updates!</p>
           <div className="overflow-y-scroll lg:h-[220px] purchases">
-            <p className="border-y-[1px] border-gray-400 text-center py-2">One more game added!</p>
+          <p className="border-y-[1px] border-gray-400 text-center py-2">Stock market paused from 20th Nov to 1st Dec!</p>
+            <p className="border-b-[1px] border-gray-400 text-center py-2">One more game added!</p>
             <p className="border-b-[1px] border-gray-400 text-center py-2">The first Spystop pass is releasing on 15th Nov 2022</p>
             <p className="border-b-[1px] border-gray-400 text-center py-2">Night Market is coming live again on 30th Nov 2022</p>
             <p className="border-b-[1px] border-gray-400 text-center py-2">10 Players completed!</p>
