@@ -107,7 +107,7 @@ export default function Dashboard(){
                                         return(
                                         <div className="flex py-2 my-3 dark-glassmorph w-[97%] p-2" key={data.id}>                                            <div className="px-2">
                                                 <p>{data.item}</p>
-                                                <p>Claim: {data.answer}</p>
+                                                <p>Claim: <span className="text-blue-600">{data.answer}</span></p>
                                                 <p>Bought for: <img src="./coin.gif" className="w-5 inline-flex"/> {data.price}</p>
                                             </div>
                                         </div>
